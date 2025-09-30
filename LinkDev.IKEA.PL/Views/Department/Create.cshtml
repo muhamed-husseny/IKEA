@@ -1,0 +1,52 @@
+﻿@model CreatedDepartmentDto
+@{
+    ViewData["Title"] = "Create Department";
+}
+
+<div class="create-department-wrapper mb-5 pb-5">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-5">
+                        <h1 class="h3 mb-4">Create New Department</h1>
+                        <form asp-action="Create" method="post">
+                            <div class="mb-3">
+                                <label asp-for="Code" class="form-label"></label>
+                                <input asp-for="Code" class="form-control" />
+                                <span asp-validation-for="Code" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Name" class="form-label"></label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Description" class="form-label"></label>
+                                <input asp-for="Description" class="form-control" />
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="CreationDate" class="form-label"></label>
+                                <input asp-for="CreationDate" class="form-control" type="date" />
+                                <span asp-validation-for="CreationDate" class="text-danger"></span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save me-2"></i>Create
+                                </button>
+                                <a asp-action="Index" class="btn btn-light">
+                                    <i class="fas fa-arrow-left me-2"></i>Back To List
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

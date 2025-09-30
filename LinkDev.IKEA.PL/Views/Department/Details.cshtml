@@ -1,0 +1,37 @@
+﻿@model DepartmentDetailsToReturnDto
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h3>Department Details</h3>
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="fw-bold">Code</label>
+                    <input class="form-control" value="@Model.Code" readonly />
+                </div>
+                <div class="col-md-6">
+                    <label class="fw-bold">Name</label>
+                    <input class="form-control" value="@Model.Name" readonly />
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="fw-bold">Description</label>
+                <input class="form-control" value="@Model.Description" readonly />
+            </div>
+            <div class="mb-3">
+                <label class="fw-bold">Creation Date</label>
+                <input class="form-control" value="@Model.CreationDate.ToString("dd/MM/yyyy")" readonly />
+            </div>
+            <div class="mt-4 d-flex justify-content-between">
+                <a href="@Url.Action("Index")" class="btn btn-secondary">Back To List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
