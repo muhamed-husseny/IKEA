@@ -1,10 +1,10 @@
 # IKEA — Full-Stack E-Commerce MVC Web Application
 
-A full-stack e-commerce web application built with **ASP.NET Core MVC**[cite: 10], engineered to facilitate complete end-to-end online shopping and catalog management workflows.
+A full-stack e-commerce web application built with **ASP.NET Core MVC**[cite: 10], developed to facilitate complete end-to-end online shopping and catalog management workflows.
 
 ---
 
-## Architecture & Engineering Highlights
+## Architecture 
 
 Structured inside the `src` directory[cite: 10] following a clean, multi-layered architecture:
 
